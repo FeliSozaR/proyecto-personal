@@ -32,13 +32,12 @@
       line-height: 1.6;
     }
 
-    header {
+  header {
       background-color: #00ABE4;
       color: #FFFFFF;
-      padding: 30px 20px;
+      padding: 30px 20px 55px;
       text-align: center;
-      /* Aseguramos que no haya ningún position que pueda interferir con el sticky del nav */
-      position: relative; /* Agregado para que .autor e img se posicionen correctamente dentro del header */
+      position: relative; 
     }
 
     header h1 {
@@ -47,14 +46,23 @@
       margin: 0px;
     }
 
+   .autor-info {
+      position: absolute; 
+      top: 160px;
+      right: 20px;
+      text-align: right; 
+      color: #FFFFFF;
+       font-family: 'Lato', sans-serif; 
+    }
+
     .autor {
       font-size: 20px;
       margin-top: 5px;
-      color: #FFFFFF;
-      position: absolute; 
-      top: 170px;
-      right: 20px;
-      text-align: center;
+    }
+
+    .fecha {
+      font-size: 18px;
+      margin-top: 4px;
     }
 
     header img {
@@ -72,10 +80,10 @@
       text-align: center;
       padding: 10px;
       position: sticky; 
-      top: 0; /* Se pega a la parte superior cuando el scroll llega a 0 */
+      top: 0; 
       z-index: 9999; 
-      width: 100%; /* Asegura que ocupe todo el ancho disponible */
-      display: block; /* Asegura que se comporte como un bloque independiente */
+      width: 100%; 
+      display: block; 
     }
 
     nav a {
@@ -138,7 +146,11 @@
     <h1>¿Cómo mejorarla?</h1>
     <!-- LOGO REDLAND -->
     <img src="Logo Redland.png" alt="Logo o imagen relacionada">
-    <p class="autor">Autor: Felipe Soza</p>
+    
+    <div class="autor-info">
+      <p class="autor">Autor: Felipe Soza</p>
+      <p class="fecha">5 de Octubre de 2025</p>
+    </div>
   </header>
 
   <nav>
@@ -281,6 +293,7 @@ En este gráfico, podemos observar que la curva de la velocidad promedio fue aum
 
 </body>
 </html>
+
 
 
 
