@@ -9,18 +9,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
+    /* Reset básico */
     * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;   /* <- muy importante */
-  padding: 0;
-}
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Aseguramos que html y body ocupen toda la altura para el sticky */
+    html {
+      height: 100%;
+      scroll-behavior: smooth; /* Agregado para un desplazamiento suave */
+    }
     body {
+      min-height: 100vh; /* Cambiado a min-height para asegurar que el cuerpo sea al menos el alto de la ventana */
       margin: 0;
       padding: 0;
       font-family: 'Lato', sans-serif;
@@ -34,9 +36,9 @@ html, body {
       background-color: #00ABE4;
       color: #FFFFFF;
       padding: 30px 20px;
-    position: static;
-     text-align: center;
-    
+      text-align: center;
+      /* Aseguramos que no haya ningún position que pueda interferir con el sticky del nav */
+      position: relative; /* Agregado para que .autor e img se posicionen correctamente dentro del header */
     }
 
     header h1 {
@@ -45,11 +47,11 @@ html, body {
       margin: 0px;
     }
 
- .autor {
+    .autor {
       font-size: 20px;
       margin-top: 5px;
       color: #FFFFFF;
-      position: absolute;
+      position: absolute; 
       top: 170px;
       right: 20px;
       text-align: center;
@@ -59,20 +61,21 @@ html, body {
       width: 120px;
       height: 140px;
       border-radius: 10px;
-      position: absolute;
+      position: absolute; 
       top: 20px;
       right: 20px;
     }
 
-
     nav {
-  background-color: #FFFFFF;
-  border-bottom: 2px solid #00ABE4;
-  text-align: center;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 9999;
+      background-color: #FFFFFF;
+      border-bottom: 2px solid #00ABE4;
+      text-align: center;
+      padding: 10px;
+      position: sticky; 
+      top: 0; /* Se pega a la parte superior cuando el scroll llega a 0 */
+      z-index: 9999; 
+      width: 100%; /* Asegura que ocupe todo el ancho disponible */
+      display: block; /* Asegura que se comporte como un bloque independiente */
     }
 
     nav a {
@@ -118,21 +121,21 @@ html, body {
       text-align: center;
     }
 
-  footer {
-  background-color: #00ABE4;
-  color: #FFFFFF;
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
-  width: 100%;    /* ocupa todo el ancho */
-}
+    footer {
+      background-color: #00ABE4;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
 
   <header>
- <h1>Resistencia Física</h1>
- <h1>¿Cómo mejorarla?</h1>
+    <h1>Resistencia Física</h1>
+    <h1>¿Cómo mejorarla?</h1>
     <!-- LOGO REDLAND -->
     <img src="Logo Redland.png" alt="Logo o imagen relacionada">
     <p class="autor">Autor: Felipe Soza</p>
@@ -156,8 +159,6 @@ Existen dos grandes tipos de resistencia física, la aeróbica y la anaeróbica.
 Para poder tener un rendimiento deportivo óptimo, es necesario tener una buena base tanto aeróbica como anaeróbica para poder destacar en los partidos y entrenamientos. A través del entrenamiento, es posible mejorar la capacidad del cuerpo para hacer esfuerzos prolongados. 
 <br><br>
 En este artículo, se va a profundizar sobre cómo se puede crear una rutina de entrenamiento para mejorar la resistencia física en tan solo un par de meses, para que personas amateurs, puedan mejorar su rendimiento mediante el trote, para que disfruten aún más de sus deportes y logren mejorar su nivel al practicarlo.
-
-    <!-- TEXTO INTRO -->
     </p>
 
     <!-- IMG 1-->
